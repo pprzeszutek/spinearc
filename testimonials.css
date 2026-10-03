@@ -1,0 +1,99 @@
+/* Patient testimonials */
+.testimonials{
+  padding:112px 0 118px;
+  background:#fbfcfb;
+  border-top:1px solid rgba(22,59,105,.08);
+  border-bottom:1px solid rgba(22,59,105,.08);
+}
+.testimonials-shell{
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:88px;
+  align-items:start;
+}
+.testimonials-heading h2{
+  margin:0;
+  max-width:460px;
+  color:var(--blue-black);
+}
+.testimonials-heading h2::after{
+  content:"";
+  display:block;
+  width:72px;
+  height:4px;
+  margin-top:20px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--green),#9cdda7);
+}
+.testimonials-heading p{
+  max-width:430px;
+  margin:24px 0 0;
+  color:var(--muted);
+  font-size:17px;
+  line-height:1.68;
+}
+.testimonials-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.testimonial{
+  margin:0;
+  padding:28px 28px 26px;
+  background:#fff;
+  border:1px solid rgba(22,59,105,.10);
+  border-radius:12px;
+}
+.testimonial--featured{
+  grid-column:1 / -1;
+  padding:32px 32px 30px;
+  border-left:4px solid var(--green);
+}
+.testimonial blockquote{
+  margin:0;
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.7;
+}
+.testimonial--featured blockquote{
+  font-family:"Source Serif 4",serif;
+  font-size:27px;
+  line-height:1.42;
+  letter-spacing:-.018em;
+  color:var(--blue-black);
+}
+.testimonial figcaption{
+  margin-top:22px;
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+.testimonials-source{
+  grid-column:2;
+  margin:4px 0 0;
+  color:#8390a0;
+  font-size:12px;
+  line-height:1.5;
+}
+
+@media(max-width:960px){
+  .testimonials{padding:68px 0 72px}
+  .testimonials-shell{grid-template-columns:1fr;gap:32px}
+  .testimonials-heading p{font-size:16px;line-height:1.65;margin-top:18px}
+  .testimonials-grid{grid-template-columns:1fr;gap:14px}
+  .testimonial--featured{grid-column:auto}
+  .testimonials-source{grid-column:auto}
+}
+
+@media(max-width:620px){
+  .testimonials{padding:58px 0 62px}
+  .testimonials-heading h2{font-size:34px;line-height:1.02;letter-spacing:-.04em;max-width:340px}
+  .testimonials-heading h2::after{width:58px;height:3px;margin-top:14px}
+  .testimonials-shell{gap:26px}
+  .testimonial,.testimonial--featured{padding:22px 20px 21px;border-radius:8px}
+  .testimonial--featured blockquote{font-size:22px;line-height:1.48}
+  .testimonial blockquote{font-size:16px;line-height:1.68}
+  .testimonial figcaption{margin-top:18px}
+  .testimonials-source{font-size:11.5px}
+}
