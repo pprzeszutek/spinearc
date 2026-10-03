@@ -1,0 +1,127 @@
+/* Layout corrections: full-bleed hero background, safer gutters, simpler section hierarchy */
+
+/* Remove small eyebrow/kicker labels throughout the page. */
+.eyebrow{
+  display:none !important;
+}
+
+/* Full-width visual field with content kept inside a comfortable reading grid. */
+.hero{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding-top:76px !important;
+  padding-bottom:96px !important;
+  padding-left:max(40px, calc((100vw - 1320px) / 2)) !important;
+  padding-right:max(40px, calc((100vw - 1320px) / 2)) !important;
+  grid-template-columns:minmax(400px,.88fr) minmax(520px,1.12fr) !important;
+  gap:72px !important;
+  box-sizing:border-box;
+  background:
+    radial-gradient(circle at 6% 18%,rgba(101,200,116,.14),transparent 28%),
+    radial-gradient(circle at 92% 76%,rgba(22,59,105,.055),transparent 24%),
+    linear-gradient(180deg,#fff 0%,#fbfcfb 100%) !important;
+}
+
+/* Keep copy and controls well clear of the viewport edge. */
+.hero-content{
+  padding:8px 0 8px 0 !important;
+  min-width:0;
+}
+.hero h1{
+  margin-top:0 !important;
+  max-width:590px !important;
+}
+.hero-lede{
+  max-width:570px !important;
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+/* Let decorative elements use the full hero canvas. */
+.hero::before{
+  left:-105px !important;
+  top:22px !important;
+}
+.hero::after{
+  right:max(24px, calc((100vw - 1380px) / 2)) !important;
+  width:min(520px,36vw) !important;
+  bottom:42px !important;
+}
+
+/* With labels removed, tighten section starts so headings still feel intentional. */
+.intro-heading h2,
+.services-header h2,
+.insurance-title h2,
+.location-top h2,
+.doctor-copy h2,
+.naprapathy-grid h2,
+.closing-inner h2{
+  margin-top:0;
+}
+
+/* The decorative section accents carry hierarchy instead of repeated micro-labels. */
+.intro::before,
+.insurance::before{
+  top:86px !important;
+}
+
+@media(max-width:1180px){
+  .hero{
+    padding-left:36px !important;
+    padding-right:36px !important;
+    grid-template-columns:minmax(360px,.9fr) minmax(460px,1.1fr) !important;
+    gap:44px !important;
+  }
+}
+
+@media(max-width:960px){
+  .hero{
+    width:100% !important;
+    padding:56px 28px 70px !important;
+    grid-template-columns:1fr !important;
+    gap:40px !important;
+  }
+  .hero-content{
+    padding:0 !important;
+  }
+  .hero-image{
+    width:100% !important;
+  }
+  .hero::after{
+    right:18px !important;
+    width:72% !important;
+    bottom:32px !important;
+  }
+}
+
+@media(max-width:620px){
+  .hero{
+    padding:44px 22px 56px !important;
+    gap:30px !important;
+  }
+  .hero h1{
+    font-size:46px !important;
+    max-width:100% !important;
+  }
+  .hero-lede{
+    max-width:100% !important;
+  }
+  .hero-actions{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    width:100%;
+  }
+  .hero-actions .button{
+    width:100%;
+  }
+  .hero::before{
+    left:-155px !important;
+  }
+  .hero::after{
+    width:84% !important;
+    right:8px !important;
+  }
+}
