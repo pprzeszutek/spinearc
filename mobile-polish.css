@@ -1,0 +1,131 @@
+/* Mobile optimization pass */
+@media (max-width: 960px){
+  .section-shell{width:calc(100% - 32px) !important}
+
+  .intro,
+  .doctor-section,
+  .services,
+  .naprapathy-band,
+  .insurance,
+  .location{
+    scroll-margin-top:74px;
+  }
+
+  .intro{padding:68px 0 72px !important;gap:34px !important}
+  .intro-copy{padding:26px 24px !important}
+  .intro-copy p{font-size:16px !important;line-height:1.72 !important}
+  .intro-copy .lead{font-size:18px !important;line-height:1.62 !important}
+  .intro-copy p:last-of-type{margin-bottom:20px !important}
+
+  .doctor-section{padding:68px 0 72px !important}
+  .doctor-grid{gap:34px !important}
+  .doctor-copy{padding:0 !important}
+  .doctor-copy>p:not(.doctor-role){font-size:16px !important;line-height:1.68 !important}
+  .doctor-role{margin-bottom:20px !important}
+  .doctor-copy .button{margin-top:6px !important}
+
+  .services{padding:68px 0 72px !important}
+  .services-header{margin-bottom:34px !important}
+  .services-header>p{font-size:16px !important;line-height:1.62 !important;max-width:34rem !important}
+  .service-list{gap:14px !important}
+  .service-list article{padding:22px 22px 24px !important}
+  .service-list h3{font-size:20px !important;line-height:1.25 !important;margin-bottom:10px !important}
+  .service-list p{font-size:15.5px !important;line-height:1.62 !important}
+
+  .naprapathy-band{padding:68px 0 72px !important}
+  .naprapathy-grid{gap:28px !important}
+  .naprapathy-grid>div:last-child>p:first-child{font-size:16px !important;line-height:1.68 !important;margin-bottom:20px !important}
+  .fine-print{font-size:12.5px !important;line-height:1.55 !important;padding-top:18px !important}
+
+  .insurance{padding:68px 0 72px !important;gap:30px !important}
+  .insurance-title p:last-child{font-size:16px !important;line-height:1.65 !important;margin-top:18px !important}
+  .insurance-rows{gap:10px !important}
+  .insurance-rows>div{padding:18px 18px 18px 22px !important;grid-template-columns:1fr !important;gap:4px !important}
+  .insurance-rows span{font-size:10px !important;padding-top:0 !important}
+  .insurance-rows strong{font-size:16px !important;line-height:1.35 !important}
+
+  .location{padding-top:68px !important}
+  .location-top{gap:34px !important;padding-bottom:52px !important}
+  .hours{padding:20px 20px !important}
+  .map-frame{width:calc(100% - 32px) !important;margin-bottom:64px !important;height:360px !important}
+
+  .closing-cta{padding:58px 0 !important}
+  .closing-inner{gap:28px !important}
+}
+
+@media (max-width: 620px){
+  .section-shell{width:calc(100% - 28px) !important}
+
+  .hero{padding:42px 14px 52px !important;gap:28px !important}
+  .hero h1{font-size:42px !important;line-height:.98 !important}
+  .hero-lede{font-size:16px !important;line-height:1.62 !important}
+
+  h2,
+  .intro-heading h2,
+  .doctor-copy h2,
+  .services-header h2,
+  .insurance-title h2,
+  .location-top h2,
+  .closing-inner h2{
+    font-size:34px !important;
+    line-height:1.02 !important;
+    letter-spacing:-.04em !important;
+  }
+
+  .intro-heading h2{max-width:360px !important}
+  .doctor-copy h2{max-width:330px !important}
+  .services-header h2{max-width:350px !important}
+  .insurance-title h2{max-width:360px !important}
+  .location-top h2{max-width:360px !important}
+
+  .naprapathy-grid h2{
+    font-size:31px !important;
+    line-height:1.04 !important;
+    max-width:360px !important;
+    letter-spacing:-.035em !important;
+  }
+
+  .intro,
+  .doctor-section,
+  .services,
+  .naprapathy-band,
+  .insurance{
+    padding-top:58px !important;
+    padding-bottom:62px !important;
+  }
+
+  .intro{gap:28px !important}
+  .intro-copy{padding:24px 22px !important;border-radius:14px !important}
+  .intro-copy::after{width:66px !important;height:66px !important;right:-14px !important;bottom:-14px !important}
+
+  .doctor-grid{gap:28px !important}
+  .doctor-image-wrap img{border-radius:16px !important}
+  .doctor-copy h2::after,
+  .services-header h2::after,
+  .naprapathy-grid h2::after,
+  .intro-heading h2::after,
+  .insurance-title h2::after{
+    width:58px !important;
+    height:3px !important;
+    margin-top:14px !important;
+  }
+
+  .services-header{margin-bottom:28px !important}
+  .services-header>p{margin-top:18px !important}
+  .service-list{gap:12px !important}
+  .service-list article{padding:20px 20px 22px !important;border-radius:8px !important}
+
+  .naprapathy-grid{gap:24px !important}
+
+  .insurance{gap:26px !important}
+  .insurance-title p:last-child{margin-top:16px !important}
+
+  .location{padding-top:58px !important}
+  .location-top{gap:28px !important;padding-bottom:44px !important}
+  .location-actions{display:grid !important;grid-template-columns:1fr !important}
+  .location-actions .button{width:100% !important}
+  .map-frame{width:calc(100% - 28px) !important;height:320px !important;margin-bottom:56px !important;border-radius:16px !important}
+
+  .closing-inner{align-items:stretch !important}
+  .closing-inner .button{width:100% !important}
+}
