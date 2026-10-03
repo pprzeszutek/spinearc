@@ -22,31 +22,12 @@
     radial-gradient(circle at 92% 76%,rgba(22,59,105,.055),transparent 24%),
     linear-gradient(180deg,#fff 0%,#fbfcfb 100%) !important;
 }
-
-.hero-content{
-  padding:8px 0 !important;
-  min-width:0;
-}
-.hero h1{
-  margin-top:0 !important;
-  max-width:590px !important;
-}
-.hero-lede{
-  max-width:570px !important;
-}
-.hero-actions{
-  display:flex;
-  flex-wrap:wrap;
-}
-.hero::before{
-  left:-105px !important;
-  top:22px !important;
-}
-.hero::after{
-  right:max(24px, calc((100vw - 1380px) / 2)) !important;
-  width:min(520px,36vw) !important;
-  bottom:42px !important;
-}
+.hero-content{padding:8px 0 !important;min-width:0}
+.hero h1{margin-top:0 !important;max-width:590px !important}
+.hero-lede{max-width:570px !important}
+.hero-actions{display:flex;flex-wrap:wrap}
+.hero::before{left:-105px !important;top:22px !important}
+.hero::after{right:max(24px, calc((100vw - 1380px) / 2)) !important;width:min(520px,36vw) !important;bottom:42px !important}
 
 .intro-heading h2,
 .services-header h2,
@@ -54,183 +35,62 @@
 .location-top h2,
 .doctor-copy h2,
 .naprapathy-grid h2,
-.closing-inner h2{
-  margin-top:0;
-}
+.closing-inner h2{margin-top:0}
+.intro::before,.insurance::before{top:86px !important}
 
-.intro::before,
-.insurance::before{
-  top:86px !important;
-}
-
-/* Desktop typography rhythm */
 @media(min-width:961px){
-  .intro-copy p,
-  .doctor-copy>p:not(.doctor-role),
-  .services-header>p,
-  .service-list p,
-  .insurance-title p,
-  .location address,
-  .hours dt,
-  .hours dd,
-  .naprapathy-grid>div:last-child>p:first-child{
-    font-size:18px !important;
-    line-height:1.72 !important;
-  }
-
-  .doctor-copy{
-    max-width:650px !important;
-  }
-  .doctor-grid{
-    grid-template-columns:.86fr 1.14fr !important;
-    gap:108px !important;
-  }
-  .doctor-copy>p{
-    margin-bottom:22px !important;
-  }
+  .intro-copy p,.doctor-copy>p:not(.doctor-role),.services-header>p,.service-list p,.insurance-title p,.location address,.hours dt,.hours dd,.naprapathy-grid>div:last-child>p:first-child{font-size:18px !important;line-height:1.72 !important}
+  .doctor-copy{max-width:650px !important}
+  .doctor-grid{grid-template-columns:.86fr 1.14fr !important;gap:108px !important}
+  .doctor-copy>p{margin-bottom:22px !important}
 }
 
-/* Services: keep the intro and headline together, then let the cards form one clear row. */
-.services-header{
-  display:block !important;
-  margin-bottom:52px !important;
-}
-.services-header>div{
-  max-width:760px;
-}
-.services-header>p{
-  max-width:650px !important;
-  margin:22px 0 0 !important;
-  color:var(--muted) !important;
-}
-.services-header h2::after{
-  margin-top:20px !important;
-}
+.services-header{display:block !important;margin-bottom:52px !important}
+.services-header>div{max-width:760px}
+.services-header>p{max-width:650px !important;margin:22px 0 0 !important;color:var(--muted) !important}
+.services-header h2::after{margin-top:20px !important}
+.service-list{gap:22px !important}
+.service-list article{border-radius:10px !important;box-shadow:none !important;border:1px solid rgba(22,59,105,.12) !important;border-top:3px solid rgba(101,200,116,.78) !important;padding:30px 30px 32px !important;background:#fff !important}
+.service-list article:hover{transform:none !important;box-shadow:none !important;border-color:rgba(22,59,105,.18) !important;border-top-color:var(--green) !important}
+.service-number{width:auto !important;height:auto !important;margin:0 0 22px !important;border-radius:0 !important;background:transparent !important;color:#438e55 !important;font-size:12px !important;letter-spacing:.14em !important;font-weight:700 !important}
+.service-list h3{font-size:23px !important;margin-bottom:14px !important}
 
-/* Strip away the most template-like card styling. */
-.service-list{
-  gap:22px !important;
-}
-.service-list article{
-  border-radius:10px !important;
-  box-shadow:none !important;
-  border:1px solid rgba(22,59,105,.12) !important;
-  border-top:3px solid rgba(101,200,116,.78) !important;
-  padding:30px 30px 32px !important;
-  background:#fff !important;
-}
-.service-list article:hover{
-  transform:none !important;
-  box-shadow:none !important;
-  border-color:rgba(22,59,105,.18) !important;
-  border-top-color:var(--green) !important;
-}
-.service-number{
-  width:auto !important;
-  height:auto !important;
-  margin:0 0 22px !important;
-  border-radius:0 !important;
-  background:transparent !important;
-  color:#438e55 !important;
-  font-size:12px !important;
-  letter-spacing:.14em !important;
-  font-weight:700 !important;
-}
-.service-list h3{
-  font-size:23px !important;
-  margin-bottom:14px !important;
-}
+.naprapathy-grid>div:last-child{padding:10px 0 10px 34px !important;border:0 !important;border-left:1px solid rgba(255,255,255,.24) !important;border-radius:0 !important;background:transparent !important;backdrop-filter:none !important}
+.naprapathy-grid>div:last-child>p:first-child{max-width:610px}
+.fine-print{font-size:14px !important;line-height:1.6 !important}
+.insurance{gap:116px !important}
+.insurance-title p:last-child{max-width:520px !important}
 
-/* Naprapathy: editorial, not glassmorphism. */
-.naprapathy-grid>div:last-child{
-  padding:10px 0 10px 34px !important;
-  border:0 !important;
-  border-left:1px solid rgba(255,255,255,.24) !important;
-  border-radius:0 !important;
-  background:transparent !important;
-  backdrop-filter:none !important;
-}
-.naprapathy-grid>div:last-child>p:first-child{
-  max-width:610px;
-}
-.fine-print{
-  font-size:14px !important;
-  line-height:1.6 !important;
-}
+/* Desktop contact modal lives in the core loaded stylesheet so it cannot fall back into page flow. */
+body.contact-modal-open{overflow:hidden}
+.contact-modal[hidden]{display:none !important}
+.contact-modal{position:fixed !important;inset:0 !important;z-index:9999 !important;display:grid;place-items:center;padding:24px;opacity:0;transition:opacity .18s ease}
+.contact-modal.is-open{opacity:1}
+.contact-modal__backdrop{position:absolute;inset:0;background:rgba(6,25,45,.58);backdrop-filter:blur(4px)}
+.contact-modal__panel{position:relative;width:min(520px,100%);background:#fff;border:1px solid rgba(22,59,105,.12);border-radius:18px;box-shadow:0 32px 90px rgba(6,25,45,.28);padding:34px 34px 30px;color:var(--ink);transform:translateY(8px) scale(.985);transition:transform .18s ease}
+.contact-modal.is-open .contact-modal__panel{transform:translateY(0) scale(1)}
+.contact-modal__close{position:absolute;top:14px;right:16px;width:38px;height:38px;border:0;border-radius:50%;background:#f4f6f7;color:var(--blue-deep);font-size:26px;line-height:1;cursor:pointer}
+.contact-modal__panel h2{font-size:42px;line-height:1;margin:0 44px 12px 0;color:var(--blue-black)}
+.contact-modal__intro{margin:0 0 18px;color:var(--muted);font-size:17px}
+.contact-modal__number{display:inline-block;font-family:"Libre Franklin",sans-serif;font-size:31px;font-weight:700;letter-spacing:-.03em;color:var(--blue-deep);margin-bottom:24px}
+.contact-modal__actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.contact-modal__copy,.contact-modal__call{min-height:50px;display:flex;align-items:center;justify-content:center;border-radius:9px;font:700 14px/1 "DM Sans",sans-serif;cursor:pointer}
+.contact-modal__copy{border:0;background:var(--blue);color:#fff}
+.contact-modal__call{border:1px solid #cdd5dd;background:#fff;color:var(--blue-deep)}
+.contact-modal__hours{display:flex;flex-direction:column;gap:4px;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.55}
+.contact-modal__hours strong{color:var(--ink);font-size:13px}
 
-/* Insurance spacing */
-.insurance{
-  gap:116px !important;
-}
-.insurance-title p:last-child{
-  max-width:520px !important;
-}
-
-@media(max-width:1180px){
-  .hero{
-    padding-left:36px !important;
-    padding-right:36px !important;
-    grid-template-columns:minmax(360px,.9fr) minmax(460px,1.1fr) !important;
-    gap:44px !important;
-  }
-}
-
+@media(max-width:1180px){.hero{padding-left:36px !important;padding-right:36px !important;grid-template-columns:minmax(360px,.9fr) minmax(460px,1.1fr) !important;gap:44px !important}}
 @media(max-width:960px){
-  .hero{
-    width:100% !important;
-    padding:56px 28px 70px !important;
-    grid-template-columns:1fr !important;
-    gap:40px !important;
-  }
-  .hero-content{
-    padding:0 !important;
-  }
-  .hero-image{
-    width:100% !important;
-  }
-  .hero::after{
-    right:18px !important;
-    width:72% !important;
-    bottom:32px !important;
-  }
-  .services-header>p{
-    margin-top:18px !important;
-  }
-  .naprapathy-grid>div:last-child{
-    padding-left:0 !important;
-    border-left:0 !important;
-    padding-top:8px !important;
-  }
+  .contact-modal{display:none !important}
+  .hero{width:100% !important;padding:56px 28px 70px !important;grid-template-columns:1fr !important;gap:40px !important}
+  .hero-content{padding:0 !important}.hero-image{width:100% !important}.hero::after{right:18px !important;width:72% !important;bottom:32px !important}
+  .services-header>p{margin-top:18px !important}
+  .naprapathy-grid>div:last-child{padding-left:0 !important;border-left:0 !important;padding-top:8px !important}
 }
-
 @media(max-width:620px){
-  .hero{
-    padding:44px 22px 56px !important;
-    gap:30px !important;
-  }
-  .hero h1{
-    font-size:46px !important;
-    max-width:100% !important;
-  }
-  .hero-lede{
-    max-width:100% !important;
-  }
-  .hero-actions{
-    display:grid !important;
-    grid-template-columns:1fr !important;
-    width:100%;
-  }
-  .hero-actions .button{
-    width:100%;
-  }
-  .hero::before{
-    left:-155px !important;
-  }
-  .hero::after{
-    width:84% !important;
-    right:8px !important;
-  }
-  .service-list article{
-    padding:26px 24px 28px !important;
-  }
+  .hero{padding:44px 22px 56px !important;gap:30px !important}.hero h1{font-size:46px !important;max-width:100% !important}.hero-lede{max-width:100% !important}
+  .hero-actions{display:grid !important;grid-template-columns:1fr !important;width:100%}.hero-actions .button{width:100%}.hero::before{left:-155px !important}.hero::after{width:84% !important;right:8px !important}
+  .service-list article{padding:26px 24px 28px !important}
 }
+@media(prefers-reduced-motion:reduce){.contact-modal,.contact-modal__panel{transition:none}}
