@@ -36,7 +36,23 @@
 .doctor-copy h2,
 .naprapathy-grid h2,
 .closing-inner h2{margin-top:0}
-.intro::before,.insurance::before{top:86px !important}
+
+/* Standardized green divider: attach it to the section heading rather than floating it in the section. */
+.intro::before,
+.insurance::before{display:none !important}
+.intro-heading h2::after,
+.services-header h2::after,
+.insurance-title h2::after,
+.doctor-copy h2::after,
+.naprapathy-grid h2::after{
+  content:"";
+  display:block;
+  width:76px;
+  height:4px;
+  margin-top:20px;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--green),#9cdda7);
+}
 
 @media(min-width:961px){
   .intro-copy p,.doctor-copy>p:not(.doctor-role),.services-header>p,.service-list p,.insurance-title p,.location address,.hours dt,.hours dd,.naprapathy-grid>div:last-child>p:first-child{font-size:18px !important;line-height:1.72 !important}
