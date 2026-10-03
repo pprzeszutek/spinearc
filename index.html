@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="hero-fix.css">
   <link rel="stylesheet" href="layout-fixes.css">
+  <link rel="stylesheet" href="contact-modal.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -53,6 +54,25 @@
   </main>
   <footer class="site-footer"><div class="section-shell footer-grid"><a class="footer-brand" href="#top"><img src="assets/logo.png" alt=""><div><strong>SpineArc</strong><span>Naprapathic Care</span></div></a><div class="footer-location"><span>2190 Gladstone Ct Unit B</span><span>Glendale Heights, IL 60139</span></div><div class="footer-contact"><a href="tel:+16303070200">(630) 307-0200</a><span>Appointments by phone</span></div></div><div class="section-shell footer-bottom"><span>© <span id="year"></span> SpineArc. All rights reserved.</span><span>Informational website only. Content is not a substitute for individualized medical advice, diagnosis, or emergency care.</span></div></footer>
   <a class="mobile-call" href="tel:+16303070200">Call to Schedule</a>
+
+  <div class="contact-modal" id="contact-modal" hidden>
+    <div class="contact-modal__backdrop" data-contact-close></div>
+    <section class="contact-modal__panel" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+      <button class="contact-modal__close" type="button" data-contact-close aria-label="Close contact options">×</button>
+      <h2 id="contact-modal-title">Contact SpineArc</h2>
+      <p class="contact-modal__intro">Appointments are scheduled by phone.</p>
+      <a class="contact-modal__number" href="tel:+16303070200">(630) 307-0200</a>
+      <div class="contact-modal__actions">
+        <button class="contact-modal__copy" id="copy-phone" type="button">Copy Number</button>
+        <a class="contact-modal__call" href="tel:+16303070200">Call From This Device</a>
+      </div>
+      <div class="contact-modal__hours">
+        <strong>Office hours</strong>
+        <span>Mon 12–8 · Tue 7–2 · Wed 10–6 · Thu 12–8 · Fri 7–2 · Sat alternating 7–12</span>
+      </div>
+    </section>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
