@@ -38,9 +38,9 @@ function openContactModal(trigger) {
   if (!contactModal) return;
   lastFocusedElement = trigger || document.activeElement;
   contactModal.hidden = false;
+  contactModal.style.display = 'grid';
   document.body.classList.add('contact-modal-open');
   requestAnimationFrame(() => contactModal.classList.add('is-open'));
-  contactModal.querySelector('.contact-modal__close')?.focus();
 }
 
 function closeContactModal() {
@@ -49,7 +49,8 @@ function closeContactModal() {
   document.body.classList.remove('contact-modal-open');
   window.setTimeout(() => {
     contactModal.hidden = true;
-    lastFocusedElement?.focus?.();
+    contactModal.style.display = 'none';
+    lastFocusedElement?.focus?.({ preventScroll: true });
   }, 180);
 }
 
@@ -58,6 +59,7 @@ document.querySelectorAll('a[href^="tel:"]').forEach(link => {
     if (!isDesktopCallExperience()) return;
     if (link.closest('.contact-modal')) return;
     event.preventDefault();
+    event.stopPropagation();
     openContactModal(link);
   });
 });
@@ -67,9 +69,7 @@ contactModal?.querySelectorAll('[data-contact-close]').forEach(control => {
 });
 
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && contactModal && !contactModal.hidden) {
-    closeContactModal();
-  }
+  if (event.key === 'Escape' && contactModal && !contactModal.hidden) closeContactModal();
 });
 
 copyPhoneButton?.addEventListener('click', async () => {
