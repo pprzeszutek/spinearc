@@ -23,9 +23,8 @@
     linear-gradient(180deg,#fff 0%,#fbfcfb 100%) !important;
 }
 
-/* Keep copy and controls well clear of the viewport edge. */
 .hero-content{
-  padding:8px 0 8px 0 !important;
+  padding:8px 0 !important;
   min-width:0;
 }
 .hero h1{
@@ -39,8 +38,6 @@
   display:flex;
   flex-wrap:wrap;
 }
-
-/* Let decorative elements use the full hero canvas. */
 .hero::before{
   left:-105px !important;
   top:22px !important;
@@ -51,7 +48,6 @@
   bottom:42px !important;
 }
 
-/* With labels removed, tighten section starts so headings still feel intentional. */
 .intro-heading h2,
 .services-header h2,
 .insurance-title h2,
@@ -62,13 +58,12 @@
   margin-top:0;
 }
 
-/* The decorative section accents carry hierarchy instead of repeated micro-labels. */
 .intro::before,
 .insurance::before{
   top:86px !important;
 }
 
-/* Desktop typography and spacing refinement */
+/* Desktop typography rhythm */
 @media(min-width:961px){
   .intro-copy p,
   .doctor-copy>p:not(.doctor-role),
@@ -76,74 +71,99 @@
   .service-list p,
   .insurance-title p,
   .location address,
+  .hours dt,
+  .hours dd,
   .naprapathy-grid>div:last-child>p:first-child{
     font-size:18px !important;
     line-height:1.72 !important;
   }
 
-  .doctor-grid{
-    grid-template-columns:minmax(470px,.92fr) minmax(560px,1.08fr) !important;
-    gap:110px !important;
-  }
   .doctor-copy{
-    max-width:660px !important;
-    padding-right:24px !important;
+    max-width:650px !important;
   }
-  .doctor-copy>p:not(.doctor-role){
-    max-width:640px !important;
+  .doctor-grid{
+    grid-template-columns:.86fr 1.14fr !important;
+    gap:108px !important;
+  }
+  .doctor-copy>p{
     margin-bottom:22px !important;
   }
+}
 
-  .services-header{
-    grid-template-columns:minmax(480px,.95fr) minmax(0,1.05fr) !important;
-    gap:72px !important;
-    align-items:end !important;
-    margin-bottom:52px !important;
-  }
-  .services-header>p{
-    max-width:520px !important;
-    margin:0 0 8px 0 !important;
-    justify-self:start !important;
-  }
+/* Services: keep the intro and headline together, then let the cards form one clear row. */
+.services-header{
+  display:block !important;
+  margin-bottom:52px !important;
+}
+.services-header>div{
+  max-width:760px;
+}
+.services-header>p{
+  max-width:650px !important;
+  margin:22px 0 0 !important;
+  color:var(--muted) !important;
+}
+.services-header h2::after{
+  margin-top:20px !important;
+}
 
-  .service-list article{
-    min-height:242px;
-  }
-  .service-list h3{
-    font-size:23px !important;
-    line-height:1.25 !important;
-  }
+/* Strip away the most template-like card styling. */
+.service-list{
+  gap:22px !important;
+}
+.service-list article{
+  border-radius:10px !important;
+  box-shadow:none !important;
+  border:1px solid rgba(22,59,105,.12) !important;
+  border-top:3px solid rgba(101,200,116,.78) !important;
+  padding:30px 30px 32px !important;
+  background:#fff !important;
+}
+.service-list article:hover{
+  transform:none !important;
+  box-shadow:none !important;
+  border-color:rgba(22,59,105,.18) !important;
+  border-top-color:var(--green) !important;
+}
+.service-number{
+  width:auto !important;
+  height:auto !important;
+  margin:0 0 22px !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#438e55 !important;
+  font-size:12px !important;
+  letter-spacing:.14em !important;
+  font-weight:700 !important;
+}
+.service-list h3{
+  font-size:23px !important;
+  margin-bottom:14px !important;
+}
 
-  .naprapathy-grid{
-    grid-template-columns:minmax(520px,1.08fr) minmax(470px,.92fr) !important;
-    gap:110px !important;
-    align-items:center !important;
-  }
-  .naprapathy-grid>div:last-child{
-    padding:8px 0 8px 34px !important;
-    border:0 !important;
-    border-left:1px solid rgba(255,255,255,.22) !important;
-    border-radius:0 !important;
-    background:transparent !important;
-    backdrop-filter:none !important;
-    box-shadow:none !important;
-  }
-  .naprapathy-grid>div:last-child>p:first-child{
-    color:#eef4f8 !important;
-    margin-bottom:28px !important;
-  }
-  .fine-print{
-    font-size:14px !important;
-    line-height:1.65 !important;
-    color:#a9bac9 !important;
-  }
+/* Naprapathy: editorial, not glassmorphism. */
+.naprapathy-grid>div:last-child{
+  padding:10px 0 10px 34px !important;
+  border:0 !important;
+  border-left:1px solid rgba(255,255,255,.24) !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  backdrop-filter:none !important;
+}
+.naprapathy-grid>div:last-child>p:first-child{
+  max-width:610px;
+}
+.fine-print{
+  font-size:14px !important;
+  line-height:1.6 !important;
+}
 
-  .insurance{
-    gap:110px !important;
-  }
-  .insurance-title p:last-child{
-    max-width:500px !important;
-  }
+/* Insurance spacing */
+.insurance{
+  gap:116px !important;
+}
+.insurance-title p:last-child{
+  max-width:520px !important;
 }
 
 @media(max-width:1180px){
@@ -173,23 +193,13 @@
     width:72% !important;
     bottom:32px !important;
   }
-
-  .doctor-copy>p:not(.doctor-role),
-  .services-header>p,
-  .service-list p,
-  .insurance-title p,
-  .naprapathy-grid>div:last-child>p:first-child{
-    font-size:17px !important;
-    line-height:1.7 !important;
+  .services-header>p{
+    margin-top:18px !important;
   }
-
   .naprapathy-grid>div:last-child{
-    padding:26px 0 0 !important;
-    border:0 !important;
-    border-top:1px solid rgba(255,255,255,.18) !important;
-    border-radius:0 !important;
-    background:transparent !important;
-    backdrop-filter:none !important;
+    padding-left:0 !important;
+    border-left:0 !important;
+    padding-top:8px !important;
   }
 }
 
@@ -219,5 +229,8 @@
   .hero::after{
     width:84% !important;
     right:8px !important;
+  }
+  .service-list article{
+    padding:26px 24px 28px !important;
   }
 }
