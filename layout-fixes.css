@@ -68,6 +68,84 @@
   top:86px !important;
 }
 
+/* Desktop typography and spacing refinement */
+@media(min-width:961px){
+  .intro-copy p,
+  .doctor-copy>p:not(.doctor-role),
+  .services-header>p,
+  .service-list p,
+  .insurance-title p,
+  .location address,
+  .naprapathy-grid>div:last-child>p:first-child{
+    font-size:18px !important;
+    line-height:1.72 !important;
+  }
+
+  .doctor-grid{
+    grid-template-columns:minmax(470px,.92fr) minmax(560px,1.08fr) !important;
+    gap:110px !important;
+  }
+  .doctor-copy{
+    max-width:660px !important;
+    padding-right:24px !important;
+  }
+  .doctor-copy>p:not(.doctor-role){
+    max-width:640px !important;
+    margin-bottom:22px !important;
+  }
+
+  .services-header{
+    grid-template-columns:minmax(480px,.95fr) minmax(0,1.05fr) !important;
+    gap:72px !important;
+    align-items:end !important;
+    margin-bottom:52px !important;
+  }
+  .services-header>p{
+    max-width:520px !important;
+    margin:0 0 8px 0 !important;
+    justify-self:start !important;
+  }
+
+  .service-list article{
+    min-height:242px;
+  }
+  .service-list h3{
+    font-size:23px !important;
+    line-height:1.25 !important;
+  }
+
+  .naprapathy-grid{
+    grid-template-columns:minmax(520px,1.08fr) minmax(470px,.92fr) !important;
+    gap:110px !important;
+    align-items:center !important;
+  }
+  .naprapathy-grid>div:last-child{
+    padding:8px 0 8px 34px !important;
+    border:0 !important;
+    border-left:1px solid rgba(255,255,255,.22) !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    backdrop-filter:none !important;
+    box-shadow:none !important;
+  }
+  .naprapathy-grid>div:last-child>p:first-child{
+    color:#eef4f8 !important;
+    margin-bottom:28px !important;
+  }
+  .fine-print{
+    font-size:14px !important;
+    line-height:1.65 !important;
+    color:#a9bac9 !important;
+  }
+
+  .insurance{
+    gap:110px !important;
+  }
+  .insurance-title p:last-child{
+    max-width:500px !important;
+  }
+}
+
 @media(max-width:1180px){
   .hero{
     padding-left:36px !important;
@@ -94,6 +172,24 @@
     right:18px !important;
     width:72% !important;
     bottom:32px !important;
+  }
+
+  .doctor-copy>p:not(.doctor-role),
+  .services-header>p,
+  .service-list p,
+  .insurance-title p,
+  .naprapathy-grid>div:last-child>p:first-child{
+    font-size:17px !important;
+    line-height:1.7 !important;
+  }
+
+  .naprapathy-grid>div:last-child{
+    padding:26px 0 0 !important;
+    border:0 !important;
+    border-top:1px solid rgba(255,255,255,.18) !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    backdrop-filter:none !important;
   }
 }
 
